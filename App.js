@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./src/style.css";
+import "./style.css";
 import Header from "./src/Components/Header";
 
-const Applayout=()=>{
+const AppLayout=()=>{
     return(
         <div className="app">
             <Header/>
@@ -12,4 +12,4 @@ const Applayout=()=>{
 };
 
 const root=ReactDOM.createRoot(document.getElementById("root"));
- root.render(<Applayout />);
+ root.render(<AppLayout />);
