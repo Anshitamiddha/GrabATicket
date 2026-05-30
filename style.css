@@ -1,146 +1,747 @@
-/* Header */
-.header {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 0 24px;
-    height: 60px;
-    background: #0f172a;
-    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
+/* ── Welcome Header ── */
+
+/* Full width top bar */
+.welcome-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 28px;
+  height: 60px;
+  background: #0a0f1e;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.06);
 }
 
-/* Logo + caption group */
-.logo-wrap {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-right: 8px;
-    text-decoration: none;
+/* Blue square logo box */
+.welcome-logo-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4px;
+}
+
+.welcome-logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* App name beside the logo */
+.welcome-logo-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f1f5f9;
+  letter-spacing: -0.01em;
+}
+
+/* Groups nav links and sign in button on the right */
+.welcome-header-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Ghost nav links */
+.welcome-header-link {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 7px;
+  background: transparent;
+  color: #64748b;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.welcome-header-link:hover {
+  color: #f1f5f9;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Blue outlined sign in button */
+.welcome-signin-btn {
+  padding: 7px 16px;
+  border-radius: 8px;
+  border: 0.5px solid rgba(59, 130, 246, 0.4);
+  background: rgba(59, 130, 246, 0.12);
+  color: #60a5fa;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.welcome-signin-btn:hover {
+  background: rgba(59, 130, 246, 0.22);
+}
+
+/* ── Welcome Hero ── */
+
+/* Centered hero block with padding top and bottom */
+.welcome-hero {
+  text-align: center;
+  padding: 64px 24px 48px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Small pill tag above the heading */
+.welcome-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  background: rgba(59, 130, 246, 0.1);
+  border: 0.5px solid rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+/* Large bold heading */
+.welcome-hero-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #f8fafc;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+/* Blue coloured words in the heading */
+.welcome-hero-accent {
+  color: #3b82f6;
+}
+
+/* Subtext below the heading */
+.welcome-hero-sub {
+  font-size: 15px;
+  color: #475569;
+  line-height: 1.7;
+  max-width: 420px;
+  margin: 0 auto 32px;
+}
+
+/* Row holding both CTA buttons */
+.welcome-hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* Solid blue primary button */
+.welcome-btn-primary {
+  padding: 11px 24px;
+  border-radius: 10px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.welcome-btn-primary:hover {
+  background: #1d4ed8;
+}
+
+/* Outlined secondary button */
+.welcome-btn-ghost {
+  padding: 11px 20px;
+  border-radius: 10px;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  background: transparent;
+  color: #94a3b8;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.welcome-btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #f1f5f9;
+}
+
+/* ── Welcome Events ── */
+
+/* Section wrapper with padding */
+.welcome-section {
+  padding: 32px 24px;
+}
+
+/* Row with title on left and "See all" on right */
+.welcome-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+/* Section heading */
+.welcome-section-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+/* "See all →" link button */
+.welcome-see-all {
+  font-size: 12px;
+  color: #3b82f6;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Three cards side by side */
+.welcome-events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+/* Individual event card */
+.welcome-event-card {
+  background: #0f172a;
+  border: 0.5px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+/* Blue border glow on hover */
+.welcome-event-card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Coloured top banner — holds the emoji icon */
+.welcome-event-banner {
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+/* Each event has its own banner background */
+.welcome-event-banner.blue   { background: #0c1f4a; }
+.welcome-event-banner.purple { background: #160d3a; }
+.welcome-event-banner.teal   { background: #062d22; }
+
+/* Padding around card content */
+.welcome-event-body {
+  padding: 12px 14px;
+}
+
+/* Event name */
+.welcome-event-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 4px;
+}
+
+/* Date, time and venue */
+.welcome-event-meta {
+  font-size: 11px;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+/* Price left, button right */
+.welcome-event-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Price colour matches the event theme */
+.welcome-event-price        { font-size: 12px; font-weight: 600; }
+.welcome-event-price.blue   { color: #3b82f6; }
+.welcome-event-price.purple { color: #a78bfa; }
+.welcome-event-price.teal   { color: #2dd4bf; }
+
+/* Book now button */
+.welcome-book-btn {
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* Button colour matches the event theme */
+.welcome-book-btn.blue   { background: rgba(59,  130, 246, 0.15); color: #60a5fa; }
+.welcome-book-btn.purple { background: rgba(124,  58, 237, 0.15); color: #a78bfa; }
+.welcome-book-btn.teal   { background: rgba( 20, 184, 166, 0.15); color: #2dd4bf; }
+
+/* Stack cards on mobile */
+@media (max-width: 640px) {
+  .welcome-events-grid { grid-template-columns: 1fr; }
+}
+
+/* ── Welcome Quick Actions ── */
+
+/* Four cards in a row */
+.welcome-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 0 24px 32px;
+}
+
+/* Individual action card */
+.welcome-action-card {
+  background: #0f172a;
+  border: 0.5px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 16px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+/* Subtle highlight on hover */
+.welcome-action-card:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: #131d30;
+}
+
+/* Coloured square icon box */
+.welcome-action-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;  /* stops icon shrinking on small text */
+}
+
+/* Each action has its own icon background colour */
+.welcome-action-icon.blue   { background: rgba(59,  130, 246, 0.15); }
+.welcome-action-icon.purple { background: rgba(124,  58, 237, 0.15); }
+.welcome-action-icon.teal   { background: rgba( 20, 184, 166, 0.15); }
+.welcome-action-icon.amber  { background: rgba(245, 158,  11, 0.15); }
+
+/* Label beside the icon */
+.welcome-action-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+/* Two cards per row on mobile */
+@media (max-width: 640px) {
+  .welcome-actions-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* ── Ticket Page ── */
+
+/* Full page wrapper */
+.ticket-page {
+  background: #080c14;
+  min-height: 100vh;
+}
+
+/* Two column grid — selector left, summary right */
+.ticket-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  align-items: start;
+}
+
+/* Left column — ticket selector */
+.ticket-page-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Right column — sticks in view while scrolling */
+.ticket-page-right {
+  position: sticky;
+  top: 1.5rem;
+}
+
+/* Stack on mobile */
+@media (max-width: 640px) {
+  .ticket-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-page-right {
+    position: static;
+  }
+}
+
+/* ============================================
+   TICKET SELECTOR
+   ============================================ */
+
+/* One row per ticket type — name on left, counter on right */
+.ticket-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 0;
+
+  /* Thin line separating each ticket type */
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
+}
+
+/* No border after the very last row */
+.ticket-row:last-child {
+  border-bottom: none;
+}
+
+/* Left side — ticket name */
+.ticket-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+/* Price and extra description below the name */
+.ticket-price {
+  font-size: 11px;
+  color: #475569;
+  margin-top: 3px;
+}
+
+/* Wraps the − number + buttons together */
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Plus and minus buttons */
+.counter button {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+/* Blue tint when hovering a counter button */
+.counter button:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #60a5fa;
+}
+
+/* The count number sitting between the two buttons */
+.counter span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f1f5f9;
+  min-width: 16px;
+  text-align: center;
+}
+
+/* "Popular" badge on VIP ticket */
+.badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-left: 6px;
+  background: rgba(59, 130, 246, 0.15);
+  color: #60a5fa;
+  vertical-align: middle;
 }
 
 
-.logocaption h4 {
-    margin: 0;
-    font-size: 14px;
-    font-weight: 600;
-    color: #f1f5f9;
-    letter-spacing: -0.01em;
-    white-space: nowrap;
+
+/* ============================================
+   ORDER SUMMARY
+   ============================================ */
+
+/* Event date and venue line below the event title */
+.event-meta {
+  font-size: 11px;
+  color: #475569;
+  margin: -6px 0 14px;
 }
 
-/* Divider between logo and nav */
-.header-divider {
-    width: 0.5px;
-    height: 24px;
-    background: rgba(255, 255, 255, 0.10);
-    margin: 0 6px;
-    flex-shrink: 0;
+/* Thin horizontal line between sections */
+.divider {
+  border: none;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.06);
+  margin: 12px 0;
 }
 
-/* Nav buttons */
-.browse-btn,
-.my-ticket-btn,
-.calendar {
-    display: flex;
+/* Each line item row — label on left, amount on right */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 7px;
 }
 
-.browse-btn button,
-.my-ticket-btn button,
-.calendar button {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    border: none;
-    border-radius: 7px;
-    background: transparent;
-    color: #94a3b8;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.15s ease, color 0.15s ease;
+/* Total row is brighter and bolder than the fee rows */
+.total-row {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 0;
 }
 
-.browse-btn button:hover,
-.my-ticket-btn button:hover,
-.calendar button:hover {
-    background: rgba(255, 255, 255, 0.06);
-    color: #f1f5f9;
+/* Shown when no tickets have been selected yet */
+.empty {
+  font-size: 12px;
+  color: #334155;
 }
 
-.browse-btn button.active {
-    background: rgba(59, 130, 246, 0.15);
-    color: #60a5fa;
+/* Main blue pay button */
+.pay-btn {
+  margin-top: 1.1rem;
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+
+  /* Blue glow under the button */
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+  transition: opacity 0.15s, transform 0.1s;
 }
 
-/* Spacer to push profile to the right */
-.nav-spacer {
-    flex: 1;
+/* Slight lift on hover */
+.pay-btn:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
-/* Profile section */
-.profile-btn {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 6px 10px 6px 6px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 0.5px solid rgba(255, 255, 255, 0.09);
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background 0.15s ease, border-color 0.15s ease;
-    margin-left: auto;
+/* Greyed out when no tickets are selected */
+.pay-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
-.profile-btn:hover {
-    background: rgba(255, 255, 255, 0.09);
-    border-color: rgba(255, 255, 255, 0.15);
+/* "Secured by..." line below the pay button */
+.gateway-note {
+  font-size: 11px;
+  color: #334155;
+  text-align: center;
+  margin-top: 9px;
 }
 
-.logo {
-    width: 38px;
-    height: 38px;
-    border-radius: 10px;
-    overflow: hidden;
-    flex-shrink: 0;
-    background: #1e3a5f;        /* dark blue bg makes the white ticket icon pop */
-    padding: 5px;
+/* Email delivery note at the very bottom */
+.email-note {
+  font-size: 11px;
+  color: #334155;
+  margin-top: 11px;
+  line-height: 1.5;
+}
+/* ============================================
+   LOGIN PAGE
+   ============================================ */
+
+/* Full screen centered layout */
+.login-page {
+  min-height: 100vh;
+  background: #080c14;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
 }
 
-.logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;        /* contain instead of cover for icon PNGs */
-    display: block;
+/* Centered card */
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background: #0f172a;
+  border: 0.5px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 2.25rem 2rem;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
 }
 
-.profile-logo {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-    background: #1e293b;
-    border: 1.5px solid rgba(255, 255, 255, 0.12);
+/* Logo icon + app name stacked at the top */
+.login-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
 }
 
-.profile-logo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-.name h3 {
-    margin: 0;
-    font-size: 13px;
-    font-weight: 600;
-    color: #f1f5f9;
-    line-height: 1.2;
+/* Blue icon box */
+.login-logo-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  background: #1d4ed8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 6px;
 }
 
-.user-details h4 {
-    margin: 0;
-    font-size: 11px;
-    color: #64748b;
-    line-height: 1.2;
+.login-logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* App name below icon */
+.login-logo-text {
+  font-size: 17px;
+  font-weight: 700;
+  color: #f1f5f9;
+  letter-spacing: -0.01em;
+}
+
+/* Small description below app name */
+.login-subtitle {
+  font-size: 12px;
+  color: #475569;
+  text-align: center;
+  margin-bottom: 28px;
+  line-height: 1.6;
+}
+
+/* Form stacks fields vertically */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Label + input pair */
+.login-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+/* Small uppercase label above each input */
+.login-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #475569;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Text and password inputs */
+.login-input {
+  background: #080c14;
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 11px 14px;
+  color: #e2e8f0;
+  font-size: 14px;
+  font-family: inherit;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+/* Blue glow ring when input is focused */
+.login-input:focus {
+  border-color: rgba(59, 130, 246, 0.5);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Dim placeholder text */
+.login-input::placeholder {
+  color: #334155;
+}
+
+/* Blue gradient sign in button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 4px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
+  transition: opacity 0.15s, transform 0.1s;
+}
+
+/* Slight lift on hover */
+.login-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+}
+
+/* "or" divider line between button and sign up link */
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0;
+}
+
+.login-divider span {
+  font-size: 11px;
+  color: #334155;
+  white-space: nowrap;
+}
+
+/* Lines either side of "or" */
+.login-divider::before,
+.login-divider::after {
+  content: "";
+  flex: 1;
+  height: 0.5px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* "Don't have an account? Sign up" */
+.login-footer {
+  font-size: 12px;
+  color: #475569;
+  text-align: center;
+}
+
+.login-footer a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  text-decoration: underline;
 }

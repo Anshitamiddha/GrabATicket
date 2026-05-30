@@ -1,7 +1,7 @@
-import "AttendeeDetails.css";
 import { useState } from "react";
 
-export default function AttendeeDetails() {
+// onChange prop — passes form data up to App.js whenever a field changes
+export default function AttendeeDetails({ onChange }) {
 
   // State to store all attendee form data
   const [form, setForm] = useState({
@@ -12,11 +12,14 @@ export default function AttendeeDetails() {
   });
 
   // Generic function to update any field in the form state
-  const update = (field) => (e) =>
-    setForm({
+  const update = (field) => (e) => {
+    const updated = {
       ...form,                 // Keep existing form values
       [field]: e.target.value  // Update only the selected field
-    });
+    };
+    setForm(updated);
+    onChange?.(updated);       // Notify App.js with the latest form data
+  };
 
   return (
     <div className="card">
