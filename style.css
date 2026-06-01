@@ -34,7 +34,7 @@
 .welcome-logo-text {
   font-size: 14px;
   font-weight: 600;
-  color: #f1f5f9;
+  color: #2d85de;
   letter-spacing: -0.01em;
 }
 
@@ -106,7 +106,7 @@
 .welcome-hero-heading {
   font-size: 36px;
   font-weight: 700;
-  color: #f8fafc;
+  color: #092745;
   letter-spacing: -0.03em;
   line-height: 1.15;
   margin-bottom: 14px;
@@ -166,6 +166,226 @@
   color: #f1f5f9;
 }
 
+/* ─────────────────────────────────────────
+   WELCOME HERO
+───────────────────────────────────────── */
+.welcome-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 80px 24px 72px;
+  background: linear-gradient(160deg, #0f172a 0%, #1e293b 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* subtle radial glow behind heading */
+.welcome-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 55% at 50% 40%, rgba(99,102,241,.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── pill tag ── */
+.welcome-hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(99,102,241,.45);
+  background: rgba(99,102,241,.12);
+  color: #a5b4fc;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+/* ── main heading ── */
+.welcome-hero-heading {
+  margin: 0 0 20px;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #f1f5f9;
+  letter-spacing: -0.02em;
+}
+
+.welcome-hero-accent {
+  background: linear-gradient(90deg, #818cf8, #c084fc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── subtext ── */
+.welcome-hero-sub {
+  max-width: 480px;
+  margin: 0 0 36px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #94a3b8;
+}
+
+/* ── CTA buttons ── */
+.welcome-hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.welcome-btn-primary {
+  padding: 13px 30px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 18px rgba(99,102,241,.4);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.welcome-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(99,102,241,.55);
+}
+
+.welcome-btn-ghost {
+  padding: 13px 30px;
+  border-radius: 10px;
+  border: 1.5px solid rgba(148,163,184,.35);
+  background: transparent;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color .18s ease, color .18s ease, background .18s ease;
+}
+
+.welcome-btn-ghost:hover {
+  border-color: #818cf8;
+  color: #a5b4fc;
+  background: rgba(99,102,241,.08);
+}
+
+
+/* ─────────────────────────────────────────
+   PURPOSE SECTION
+───────────────────────────────────────── */
+.purpose-section {
+  background: #0f172a;
+  padding: 72px 24px 88px;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+
+/* ── eyebrow label ── */
+.purpose-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: #818cf8;
+  margin-bottom: 14px;
+}
+
+/* ── section heading ── */
+.purpose-heading {
+  margin: 0 0 16px;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 800;
+  color: #f1f5f9;
+  letter-spacing: -0.02em;
+}
+
+/* ── section subtext ── */
+.purpose-sub {
+  max-width: 460px;
+  margin: 0 auto 52px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+/* ── four-column card grid ── */
+.purpose-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ── individual card ── */
+.purpose-card {
+  background: #1e293b;
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: left;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.purpose-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(99,102,241,.4);
+  box-shadow: 0 12px 32px rgba(99,102,241,.12);
+}
+
+.purpose-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(99,102,241,.15);
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+}
+
+.purpose-card-title {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.purpose-card-desc {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: #64748b;
+}
+
+
+/* ─────────────────────────────────────────
+   RESPONSIVE TWEAKS
+───────────────────────────────────────── */
+@media (max-width: 480px) {
+  .welcome-hero {
+    padding: 60px 20px 56px;
+  }
+
+  .welcome-btn-primary,
+  .welcome-btn-ghost {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .purpose-grid {
+    grid-template-columns: 1fr;
+  }
+}
 /* ── Welcome Events ── */
 
 /* Section wrapper with padding */
@@ -570,85 +790,436 @@
 /* Full screen centered layout */
 .login-page {
   min-height: 100vh;
-  background: #080c14;
+  background: linear-gradient(
+    135deg,
+    #020617 0%,
+    #0f172a 50%,
+    #111827 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 32px;
 }
 
-/* Centered card */
+/* Main card */
 .login-card {
   width: 100%;
-  max-width: 380px;
-  background: #0f172a;
-  border: 0.5px solid rgba(255, 255, 255, 0.07);
-  border-radius: 20px;
-  padding: 2.25rem 2rem;
-  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+  max-width: 430px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 2.8rem 2.5rem;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
-/* Logo icon + app name stacked at the top */
+/* Header */
 .login-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 6px;
-}
-
-/* Blue icon box */
-.login-logo-icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 14px;
-  background: #1d4ed8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  padding: 6px;
+  gap: 14px;
+  margin-bottom: 14px;
 }
 
 .login-logo-icon img {
-  width: 100%;
-  height: 100%;
+  width: 65%;
+  height: 65%;
   object-fit: contain;
 }
-
-/* App name below icon */
 .login-logo-text {
-  font-size: 17px;
+  color: #f8fafc;
+  font-size: 2rem;
   font-weight: 700;
-  color: #f1f5f9;
-  letter-spacing: -0.01em;
-}
-
-/* Small description below app name */
-.login-subtitle {
-  font-size: 12px;
-  color: #475569;
   text-align: center;
-  margin-bottom: 28px;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.login-subtitle {
+  color: #94a3b8;
+  text-align: center;
+  font-size: 14px;
   line-height: 1.6;
+  margin-bottom: 32px;
 }
 
-/* Form stacks fields vertically */
-.login-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.login-label {
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
 }
 
-/* Label + input pair */
 .login-input-group {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  width: 100%;
+}
+
+.login-input {
+  width: 100%;
+  height: 52px;
+  padding: 0 16px;
+  background: #111827;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  color: white;
+  font-size: 15px;
+}
+
+.login-input::placeholder {
+  color: #64748b;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.login-footer-note {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.login-logo-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  box-shadow: 0 0 35px rgba(59, 130, 246, 0.4);
+}
+
+.login-input:focus {
+  border-color: #3b82f6;
+  box-shadow:
+    0 0 0 4px rgba(59, 130, 246, 0.12);
+}
+
+/* Button */
+.login-btn {
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #3b82f6
+  );
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 24px rgba(37, 99, 235, 0.35);
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.45);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+}
+
+/* Divider */
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 10px 0;
+}
+
+.login-divider span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Footer */
+.login-footer {
+  text-align: center;
+  color: #94a3b8;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.login-footer a {
+  color: #60a5fa;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-footer a:hover {
+  color: #93c5fd;
+}
+
+/* ── Page ── */
+.tf-page {
+  min-height: 100vh;
+  background: #f8fafc;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* ── Banner ── */
+.tf-banner {
+  background: #1e293b;
+  color: #fff;
+  padding: 48px 32px 40px;
+  text-align: center;
+}
+
+.tf-banner-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 800;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.tf-banner-sub {
+  font-size: 0.95rem;
+  color: #94a3b8;
+  margin: 0 0 20px;
+}
+
+.tf-banner-pills {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.tf-pill {
+  padding: 5px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.15);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #cbd5e1;
+}
+
+/* ── Body ── */
+.tf-body {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+.tf-section-heading {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 20px;
+  letter-spacing: 0.01em;
+}
+
+/* ── Event list ── */
+.tf-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.tf-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  flex-wrap: wrap;
+}
+
+.tf-item-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.tf-badge {
+  flex-shrink: 0;
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.tf-badge--competition { background: #fef3c7; color: #92400e; }
+.tf-badge--workshop    { background: #dbeafe; color: #1e40af; }
+.tf-badge--talk        { background: #dcfce7; color: #166534; }
+.tf-badge--exhibition  { background: #fce7f3; color: #9d174d; }
+
+.tf-item-name {
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 3px;
+}
+
+.tf-item-meta {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ── Right side ── */
+.tf-item-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.tf-item-price {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  min-width: 52px;
+  text-align: right;
+}
+
+.tf-item-btn {
+  padding: 9px 22px;
+  border-radius: 8px;
+  border: none;
+  background: #2563eb;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .15s;
+  white-space: nowrap;
+}
+
+.tf-item-btn:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.tf-item-btn:disabled {
+  background: #e2e8f0;
+  color: #94a3b8;
+  cursor: not-allowed;
+}
+
+/* ── Responsive ── */
+@media (max-width: 520px) {
+  .tf-banner { padding: 36px 20px 28px; }
+  .tf-item { padding: 14px 16px; }
+  .tf-item-right { width: 100%; justify-content: space-between; }
+}
+
+/* ============================================
+   CARD  (shared by all three components)
+   ============================================ */
+
+/* Dark card wrapper used by every section */
+.card {
+  background: #0f172a;
+  border: 0.5px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 1.4rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Section heading inside each card */
+.card h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 1.1rem;
+  letter-spacing: -0.01em;
+}
+
+
+
+/* ============================================
+   TICKET PAGE LAYOUT
+   ============================================ */
+
+/* Full page wrapper */
+.ticket-page {
+  background: #080c14;
+  min-height: 100vh;
+}
+
+/* Two column grid — selector left, summary right */
+.ticket-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  align-items: start;
+}
+
+/* Left column — ticket selector */
+.ticket-page-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Right column — sticks while user scrolls */
+.ticket-page-right {
+  position: sticky;
+  top: 1.5rem;
+}
+
+/* Stack on mobile */
+@media (max-width: 640px) {
+  .ticket-page-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-page-right {
+    position: static;
+  }
+}
+
+
+
+/* ============================================
+   ATTENDEE DETAILS
+   ============================================ */
+
+/* Two inputs side by side */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+/* Wraps each label and input together */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 /* Small uppercase label above each input */
-.login-label {
+.field label {
   font-size: 11px;
   font-weight: 500;
   color: #475569;
@@ -656,36 +1227,164 @@
   letter-spacing: 0.05em;
 }
 
-/* Text and password inputs */
-.login-input {
+/* Text inputs and the department dropdown */
+.field input,
+.field select {
   background: #080c14;
   border: 0.5px solid rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  padding: 11px 14px;
+  border-radius: 9px;
+  padding: 9px 12px;
   color: #e2e8f0;
-  font-size: 14px;
+  font-size: 13px;
   font-family: inherit;
+  appearance: none;
   outline: none;
-  width: 100%;
   transition: border-color 0.15s, box-shadow 0.15s;
 }
 
-/* Blue glow ring when input is focused */
-.login-input:focus {
+/* Blue glow ring when a field is focused */
+.field input:focus,
+.field select:focus {
   border-color: rgba(59, 130, 246, 0.5);
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
-/* Dim placeholder text */
-.login-input::placeholder {
+/* Dim placeholder so it doesn't distract */
+.field input::placeholder {
   color: #334155;
 }
 
-/* Blue gradient sign in button */
-.login-btn {
+
+
+/* ============================================
+   TICKET SELECTOR
+   ============================================ */
+
+/* One row per ticket type — name left, counter right */
+.ticket-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 0;
+
+  /* Thin separator between rows */
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
+}
+
+/* No border after the last ticket row */
+.ticket-row:last-child {
+  border-bottom: none;
+}
+
+/* Left side — name and description */
+.ticket-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Ticket type name */
+.ticket-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+/* Price and extra info below the name */
+.ticket-price {
+  font-size: 11px;
+  color: #475569;
+  margin: 0;
+}
+
+/* Wraps − count + buttons */
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Plus and minus buttons */
+.counter button {
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+}
+
+/* Blue tint when hovering a counter button */
+.counter button:hover {
+  background: rgba(59, 130, 246, 0.2);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #60a5fa;
+}
+
+/* The number between the two buttons */
+.counter span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f1f5f9;
+  min-width: 16px;
+  text-align: center;
+}
+
+
+
+/* ============================================
+   ORDER SUMMARY
+   ============================================ */
+
+/* Event date and venue below the event title */
+.event-meta {
+  font-size: 11px;
+  color: #475569;
+  margin: -6px 0 14px;
+}
+
+/* Thin horizontal separator */
+.divider {
+  border: none;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.06);
+  margin: 12px 0;
+}
+
+/* Each line item — label left, amount right */
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: #64748b;
+  margin-bottom: 7px;
+}
+
+/* Total row is brighter and bolder */
+.total-row {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin-bottom: 0;
+}
+
+/* Shown when no tickets are selected yet */
+.empty {
+  font-size: 12px;
+  color: #334155;
+}
+
+/* Blue gradient pay button */
+.pay-btn {
+  margin-top: 1.1rem;
   width: 100%;
   padding: 12px;
-  margin-top: 4px;
   border-radius: 10px;
   border: none;
   background: linear-gradient(135deg, #2563eb, #3b82f6);
@@ -693,55 +1392,38 @@
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+
+  /* Blue glow under the button */
   box-shadow: 0 4px 14px rgba(59, 130, 246, 0.35);
   transition: opacity 0.15s, transform 0.1s;
 }
 
 /* Slight lift on hover */
-.login-btn:hover {
+.pay-btn:hover:not(:disabled) {
   opacity: 0.9;
   transform: translateY(-1px);
 }
 
-.login-btn:active {
-  transform: translateY(0);
+/* Greyed out when no tickets selected */
+.pay-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  box-shadow: none;
 }
 
-/* "or" divider line between button and sign up link */
-.login-divider {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin: 4px 0;
-}
-
-.login-divider span {
+/* "Secured by..." text below pay button */
+.gateway-note {
   font-size: 11px;
   color: #334155;
-  white-space: nowrap;
-}
-
-/* Lines either side of "or" */
-.login-divider::before,
-.login-divider::after {
-  content: "";
-  flex: 1;
-  height: 0.5px;
-  background: rgba(255, 255, 255, 0.06);
-}
-
-/* "Don't have an account? Sign up" */
-.login-footer {
-  font-size: 12px;
-  color: #475569;
   text-align: center;
+  margin-top: 9px;
 }
 
-.login-footer a {
-  color: #60a5fa;
-  text-decoration: none;
+/* Email delivery reminder at the bottom */
+.email-note {
+  font-size: 11px;
+  color: #334155;
+  margin-top: 11px;
+  line-height: 1.5;
 }
 
-.login-footer a:hover {
-  text-decoration: underline;
-}

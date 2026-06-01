@@ -20,6 +20,8 @@ import OrderSummary    from "./src/Components/OrderSummary.js";
 // Login page
 import LoginPage from "./src/Components/LoginPage.js";
 
+//Techno_fest
+import TechnoFest from "./src/Components/TechnoFest.js";
 
 
 /* ============================================
@@ -69,7 +71,7 @@ const EventsPage = () => {
                 <span className="welcome-event-price blue">₹150 onwards</span>
                 <button
                   className="welcome-book-btn blue"
-                  onClick={() => navigate("/book")}
+                  onClick={() => navigate("/technofest")}
                 >
                   Book now
                 </button>
@@ -215,6 +217,9 @@ const App = () => {
 
         {/* Browse / Calendar button */}
         <Route path="/events"     element={<EventsPage />}    />
+
+        {/* TechnoFest event page */}
+<Route path="/technofest" element={<TechnoFest />} />
 
         {/* Sign in button on welcome header */}
         <Route path="/login"      element={<LoginPage />}     />

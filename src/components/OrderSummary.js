@@ -19,7 +19,7 @@ export default function OrderSummary({ ticketCounts }) {
   return (
     <div className="card">
 
-      <h2>Techno Fest 2026</h2>
+      <h2>Hackathon  2026</h2>
       <p className="event-meta">28 May 2026 · 6:00 PM · Open Air Amphitheatre</p>
 
       <hr className="divider" />
